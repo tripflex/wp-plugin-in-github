@@ -87,7 +87,7 @@ wptomarkdown () {
     PLUGINMETA=("Contributors" "Donate link" "Donate Link" "Tags" "Requires at least" "Tested up to" "Stable tag" "License" "License URI" "Requires base plugin" "Requires base plugin version")
     for m in "${PLUGINMETA[@]}"
     do
-        _sed 's/^'"$m"':/**'"$m"':**/g' $2
+        _sed 's/^'"$m"':/+ **'"$m"':**/g' $2
     done
 
     _sed "s/===([^=]+)===/#\1#/g" $2
